@@ -11,9 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+          primarySwatch: Colors.blue,
+          inputDecorationTheme: InputDecorationTheme(
+              fillColor: Color(0xFFECF1F7),
+              isCollapsed: true,
+              filled: true,
+              border: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(60),
+                  borderSide: BorderSide.none))),
       home: LoginPage(),
     );
   }
